@@ -35,7 +35,7 @@ public class AdministratorRepository {
 		SqlParameterSource param = new BeanPropertySqlParameterSource(administrator);
 	
 		template.update(insertsql, param);
-		System.out.println("insertよびだされたで");
+		
 	
 	}
 	public Administrator findByMailAdressAndPassword(String mailAddress,String password) {
@@ -45,7 +45,7 @@ public class AdministratorRepository {
 		if(administratorList.size() ==0) {
 			return null;
 		}
-		System.out.println("findよびだされたで");
+		
 		return administratorList.get(0);
 		
 	
